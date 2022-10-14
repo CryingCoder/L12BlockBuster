@@ -18,9 +18,14 @@ namespace L12BlockBuster
             }
         }
 
-        public void CheckOut()
+        public Movie CheckOut()
         {
-
+            Console.WriteLine("Select a movie");
+            PrintMovies();
+            string input = Console.ReadLine();
+            int index = int.Parse(input);
+            Movie movie = Movies[index];
+            return movie;
         }
 
     }

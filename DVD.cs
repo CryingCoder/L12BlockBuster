@@ -16,6 +16,10 @@ namespace L12BlockBuster
         public DVD(string Title, GenreCategory Genre, int RunTime, List<string> Scenes) : base(Title, Genre, RunTime, Scenes)
         {
         }
+
+
+        //A method that plays the scene at the CurrentScene and then increments CurrentScene
+        //Because the Parent method is Abstract, this must be an override
         public override void Play()
         {
             Console.WriteLine("What Scene would you like to watch?");
@@ -26,6 +30,7 @@ namespace L12BlockBuster
             string choice = Console.ReadLine();
             PrintScenes(choice);
         }
+
 
     }
 }
